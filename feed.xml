@@ -1,0 +1,48 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://media.rss.com/style.xsl"?>
+<rss xmlns:podcast="https://podcastindex.org/namespace/1.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xml:lang="en" version="2.0">
+  <channel>
+    <title><![CDATA[">]]></title>
+    <link>https://rss.com/podcasts/input-h1-xxx-h1</link>
+    <atom:link href="https://media.rss.com/input-h1-xxx-h1/feed.xml" rel="self" type="application/rss+xml"/>
+    <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/"/>
+    <description><![CDATA[<p>mrx</p><p></p><p>"&gt;</p><p></p>]]></description>
+    <generator>RSS.com v2.15.1</generator>
+    <lastBuildDate>Sat, 04 Jan 2025 17:38:50 GMT</lastBuildDate>
+    <language>en</language>
+    <copyright><![CDATA["&gt;]]></copyright>
+    <itunes:image href="https://assets.rss.com/images/no-cover-1400.jpg"/>
+    <podcast:guid>258847af-1c9f-539d-8778-d42c3c45c270</podcast:guid>
+    <image>
+      <url>https://assets.rss.com/images/no-cover-1400.jpg</url>
+      <title>"&gt;</title>
+      <link>https://rss.com/podcasts/input-h1-xxx-h1</link>
+    </image>
+    <podcast:locked>yes</podcast:locked>
+    <podcast:license>"&amp;gt;</podcast:license>
+    <itunes:author>"&gt;</itunes:author>
+    <itunes:owner>
+      <itunes:name>"&gt;</itunes:name>
+    </itunes:owner>
+    <itunes:explicit>true</itunes:explicit>
+    <itunes:type>episodic</itunes:type>
+    <itunes:category text="Arts">
+      <itunes:category text="Books"/>
+    </itunes:category>
+    <podcast:medium>podcast</podcast:medium>
+    <item>
+      <title><![CDATA[">]]></title>
+      <itunes:title><![CDATA[">]]></itunes:title>
+      <description><![CDATA[<p>"&gt;</p><p></p>]]></description>
+      <link>https://rss.com/podcasts/input-h1-xxx-h1/1827535</link>
+      <enclosure url="https://media.rss.com/input-h1-xxx-h1/2025_01_04_17_38_23_1ae29c73-d8ba-4506-bf3d-044428caaa0b.mp3" length="2237064" type="audio/mpeg"/>
+      <guid isPermaLink="false">e02643ca-c76d-4080-9dab-e76c0a0a4729</guid>
+      <itunes:duration>139</itunes:duration>
+      <itunes:episodeType>trailer</itunes:episodeType>
+      <itunes:explicit>true</itunes:explicit>
+      <pubDate>Sat, 04 Jan 2025 17:38:50 GMT</pubDate>
+      <itunes:image href="https://media.rss.com/input-h1-xxx-h1/ep_cover_20250104_050119_93b99dd102494edb02136062c69e085b.png"/>
+    </item>
+  </channel>
+</rss>
