@@ -4,17 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <h1 id="mrx"></h1>
 </head>
 <body>
   
 
 <script>
-const data = (new URLSearchParams(location.search).get('data') || '');
+// Get the current URL parameters
+const params = new URLSearchParams(window.location.search);
 
-// extract all href="..." occurrences
-const hrefs = [...data.matchAll(/href="([^"]+)"/g)].map(m => m[1]);
+// Get the "data" parameter
+const data = params.get("code");
 
-window.location.href=hrefs[0];
+// Decode it (in case it's URL-encoded)
+const decoded = data ? decodeURIComponent(data) : null;
+mrx.innerHTML="THIS IS THE LEAKED CODE ==> "+decoded
+// Print it
+console.log(decoded);
 
 </script>
 
