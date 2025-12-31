@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>💖 Important Question 💖</title>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 3rem;
+        color: #fff;
+        text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    button {
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        margin: 20px;
+        transition: transform 0.2s;
+    }
+
+    #yes {
+        background: #28a745;
+        color: #fff;
+    }
+
+    #no {
+        background: #dc3545;
+        color: #fff;
+        position: absolute;
+    }
+
+    .hearts {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        overflow: hidden;
+    }
+
+    .heart {
+        position: absolute;
+        color: red;
+        font-size: 2rem;
+        animation: float 4s linear infinite;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(100vh) scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-10vh) scale(1.5);
+            opacity: 0;
+        }
+    }
+
+    .hidden {
+        display: none;
+    }
+</style>
+</head>
+<body>
+
+<div class="container" id="main">
+    <h1>Will you marry me? 💍</h1>
+    <button id="yes">Yes 💖</button>
+    <button id="no">No 😜</button>
+</div>
+
+<div class="container hidden" id="love">
+    <h1>Yaaaay!!! 💕💍</h1>
+    <h1>I Love You Forever 😍</h1>
+</div>
+
+<div class="hearts hidden" id="hearts"></div>
+
+<script>
+    const noBtn = document.getElementById("no");
+    const yesBtn = document.getElementById("yes");
+    const main = document.getElementById("main");
+    const love = document.getElementById("love");
+    const heartsContainer = document.getElementById("hearts");
+
+    // Move NO button randomly
+    noBtn.addEventListener("mouseover", () => {
+        const x = Math.random() * (window.innerWidth - 100);
+        const y = Math.random() * (window.innerHeight - 50);
+        noBtn.style.left = x + "px";
+        noBtn.style.top = y + "px";
+    });
+
+    // YES button animation
+    yesBtn.addEventListener("click", () => {
+        main.classList.add("hidden");
+        love.classList.remove("hidden");
+        heartsContainer.classList.remove("hidden");
+
+        // Create floating hearts
+        setInterval(() => {
+            const heart = document.createElement("div");
+            heart.className = "heart";
+            heart.innerHTML = "❤️";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = (Math.random() * 2 + 3) + "s";
+            heartsContainer.appendChild(heart);
+
+            setTimeout(() => heart.remove(), 5000);
+        }, 300);
+    });
+</script>
+
+</body>
+</html>
